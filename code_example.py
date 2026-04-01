@@ -30,7 +30,11 @@ class Book:
 
         # Возврат информации о книге в формате JSON в виде строки
         return json.dumps(book_info)
-
+    def get_age(self):
+        """Возвращает возраст книги в годах"""
+        current_year = datetime.now().year
+        year_int = self.year if isinstance(self.year, int) else int(self.year)
+        return current_year - year_int
 
 # Создание экземпляров книги с разными типами года
 book_1 = Book("1984", "George Orwell", 1949)
@@ -43,3 +47,5 @@ print(book_1)
 print(book_2)
 print(book_3)
 print(book_4)
+print("Возраст book_1:", book_1.get_age())
+print("Возраст book_3:", book_3.get_age())
