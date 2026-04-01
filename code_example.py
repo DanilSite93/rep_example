@@ -36,8 +36,7 @@ class Book:
         year_int = self.year if isinstance(self.year, int) else int(self.year)
         return current_year - year_int
 
-# Создание экземпляров книги с разными типами года
-book_1 = Book("1984", "George Orwell", 1949)
+#
 book_2 = Book("The Road", "Cormac McCarthy", "2006")
 book_3 = Book("Kapitanskaya Dochka", "Pushkin", 1836)
 book_4 = Book("Евгений Онегин", "А.С. Пушкин", "1925")
